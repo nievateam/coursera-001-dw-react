@@ -1,7 +1,5 @@
 # Desarrollo Web con React: Tu primer app
 
-**CodeSandbox:** [https://codesandbox.io/p/github/nievateam/coursera-001-desarrollo-web-react-primer-app/main?file=%2FREADME.md](https://codesandbox.io/p/github/nievateam/coursera-001-desarrollo-web-react-primer-app/main?file=%2FREADME.md)
-
 **Planeación y desarrollo de aplicación**
 
 Repositorio:
