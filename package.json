@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint . --ext .js,.jsx",
+    "lint:fix": "eslint . --fix --ext .js,.jsx",
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
     "prepare": "husky install"

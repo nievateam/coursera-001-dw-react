@@ -1,7 +1,3 @@
-import Logo from './Logo'
-
-console.log(Logo)
-
 const navigation = [
   { name: 'Solutions', href: '#' },
   { name: 'Pricing', href: '#' },
