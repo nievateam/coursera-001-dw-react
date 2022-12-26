@@ -1,82 +1,82 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "plugin:react/recommended",
-        "standard",
-        "plugin:react/jsx-runtime",
-        "prettier" // at last
-    ],
-    "overrides": [],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "no-console": "warn",
-        "react/prop-types": "off",
-        "react/self-closing-comp": "warn",
-        "padding-line-between-statements": [
-            "error",
-            {
-                "blankLine": "always",
-                "prev": "*",
-                "next": "return"
-            },
-            {
-                "blankLine": "always",
-                "prev": [
-                    "const",
-                    "let",
-                    "var"
-                ],
-                "next": "*"
-            },
-            {
-                "blankLine": "any",
-                "prev": [
-                    "const",
-                    "let",
-                    "var"
-                ],
-                "next": [
-                    "const",
-                    "let",
-                    "var"
-                ]
-            }
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard",
+    "plugin:react/jsx-runtime",
+    "prettier" // at last
+  ],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "no-console": "error",
+    "react/prop-types": "off",
+    "react/self-closing-comp": "warn",
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "always",
+        "prev": [
+          "const",
+          "let",
+          "var"
         ],
-        "import/order": [
-            "warn",
-            {
-                "pathGroups": [
-                    {
-                        "pattern": "~/**",
-                        "group": "external",
-                        "position": "after"
-                    }
-                ],
-                "newlines-between": "always-and-inside-groups"
-            }
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": [
+          "const",
+          "let",
+          "var"
         ],
-        "react/jsx-sort-props": [
-            "warn",
-            {
-                "callbacksLast": true,
-                "shorthandFirst": true,
-                "noSortAlphabetically": false,
-                "reservedFirst": true
-            }
+        "next": [
+          "const",
+          "let",
+          "var"
         ]
-    },
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
+      }
+    ],
+    "import/order": [
+      "warn",
+      {
+        "pathGroups": [
+          {
+            "pattern": "~/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "newlines-between": "always-and-inside-groups"
+      }
+    ],
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": true
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     }
+  }
 }
