@@ -1,7 +1,7 @@
 export default function ContactInfo() {
   return (
     <>
-      <form action="#" className="grid grid-cols-1 gap-y-6" method="POST">
+      <form action="#" className="grid grid-cols-1 gap-y-12" method="POST">
         <div>
           <input
             autoComplete="name"
@@ -38,7 +38,7 @@ export default function ContactInfo() {
             id="additional-info"
             name="additional-info"
             placeholder="Información adicional"
-            rows={4}
+            rows={8}
           />
         </div>
         <div>
