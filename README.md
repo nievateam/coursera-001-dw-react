@@ -1,6 +1,10 @@
-# Tabla de contenidos
+# Desarrollo Web con React: Tu primer app
 
-- [Desarrollo Web con React: Tu primer app](README.md)
+Por Mike Nieva. Impulsado por "Coursera Guide Projects".
+
+## Tabla de contenidos
+
+- [](README.md)
 
 ## Introducción
 
@@ -189,21 +193,26 @@ Usaremos `eslint`el cual es una herramienta de análisis de código para JavaScr
 
 Adicionalmente, `eslint`, así como Tailwind, tiene también muchos plugins que permiten extender las reglas.
 
-npm init @eslint/config
+Comenzaremos la instalación de `eslint` dentro del proyecto de manera local para establecer nuestras reglas y configuraciones:
+
+```shell
+$ npm init @eslint/config
+```
 
 Nos harán diversas preguntas:
 
+```
 How would you like to use ESLint?
-Escogeremos: "To check syntax and find problems".
+"To check syntax and find problems".
 
 What type of modules does your project use?
-Escogeremos: JavaScript modules (import/export)
+JavaScript modules (import/export)
 
 Which framework does your project use?
-Escogeremos: React
+React
 
 Does your project use TypeScript?
-Escogeremos: "No"
+"No"
 
 Where does your code run?
 Browser
@@ -211,14 +220,27 @@ Browser
 What format do you want your config file to be in?
 JSON
 
-Una vez hecho esto, te pedirá realizar la dependencia `eslint-plugin-react@latest` y `estlint@latest`. Seleccionamos: "Yes".
+Una vez hecho esto, te pedirá realizar la instalación de la  dependencia
+`eslint-plugin-react@latest` y `eslint@latest`. Seleccionamos: "Yes".
 
 Which package manager do you want to use?
-Usamos "npm"
+"npm"
+```
+
+Luego, de esto, instalaremos su extensión:
+
+- Eslint - ESLint
+
+NOTA: Es importante que tengas actualizado VSC al menos a partir de v17.
 
 Notarás que te aparecerá un error en `App.jsx`. Esto se debe a que estamos inclumpiendo la regla de que el archivo debe tener importando `React`.
 
-La forma en cómo quitamos ese "error de estilo", sería colocando la importación.
+En caso de que no aparezca ningún error, abrimos Settings, y nos dirigimos a la sección de habilitar `eslint`. La encontrarás bajo esta opción:
+![](docs/assets/04.png)
+
+Si tampoco aparece la opción, verifica que tu Visual Studio Code se encuentre en la versión 17 mínimo.
+
+Regresando al error, la forma en cómo quitamos, sería colocando la importación.
 
 ```jsx
 import React from 'react'
@@ -239,112 +261,37 @@ Una vez hecho eso, el error desaparece.
 
 Esto se debe a que `eslint` va a vigilar que todo el proyecto siga unas reglas y prácticas específicas.
 
-Bien, una vez hecho esto, instalaremos las dependencias para extender las reglas:
+Sin embargo, nosotros jugaremos con una versión de React actualizada, y por lo tanto, solo agregaremos una extensión llamada `plugin:react/jsx-runtime` en el área de extensiones dentro del archivo de `.eslintrc.json`.
 
-```shell
-npm install eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-n eslint-plugin-promise -D
-```
-
-Y, usaremos esta configuración en las reglas:
-
-```
-{
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
+```json
   "extends": [
     "plugin:react/recommended",
     "standard",
     "plugin:react/jsx-runtime",
-    "prettier" // at last
   ],
-  "overrides": [],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": [
-    "react"
-  ],
-  "rules": {
-    "no-console": "warn",
-    "react/prop-types": "off",
-    "react/self-closing-comp": "warn",
-    "padding-line-between-statements": [
-      "error",
-      {
-        "blankLine": "always",
-        "prev": "*",
-        "next": "return"
-      },
-      {
-        "blankLine": "always",
-        "prev": [
-          "const",
-          "let",
-          "var"
-        ],
-        "next": "*"
-      },
-      {
-        "blankLine": "any",
-        "prev": [
-          "const",
-          "let",
-          "var"
-        ],
-        "next": [
-          "const",
-          "let",
-          "var"
-        ]
-      }
-    ],
-    "import/order": [
-      "warn",
-      {
-        "pathGroups": [
-          {
-            "pattern": "~/**",
-            "group": "external",
-            "position": "after"
-          }
-        ],
-        "newlines-between": "always-and-inside-groups"
-      }
-    ],
-    "react/jsx-sort-props": [
-      "warn",
-      {
-        "callbacksLast": true,
-        "shorthandFirst": true,
-        "noSortAlphabetically": false,
-        "reservedFirst": true
-      }
-    ]
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  }
-}
+
 ```
+
+Y con esto, podremos regresar a como teníamos el archivo anteriormente.
+
+```jsx
+import React from 'react'
+import './App.css'
+
+function App() {
+  return (
+    <div className="App">
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    </div>
+  )
+}
+
+export default App
+```
+
+Con esta configuración, el archivo `App.jsx` te pide que ya no incluyas la importación de React, por lo tanto, puedes quitarla sin complicación.
 
 Puedes conocer cada regla en la documentación de `eslint`. Lo importante es que aquí estamos estableciendo qué es válido y qué no. Y al mismo tiempo, instalamos librerías adicionales que nos permiten generar reglas más específicas.
-
-Como dato adicional, con esta configuración, el archivo `App.jsx` te pide que ya no incluyas la importación de React, por lo tanto, puedes quitarla sin complicación.
-
-Por último, generamos un archivo que permitirá configurar los archivos que deben ignorarse y no aplicar las reglas de `eslint`. Este archivo se llamada `.eslintignore`.
-
-`./.eslintignore`
-
-```
-build
-coverage
-dist
-```
 
 ### Configuración de formato de código
 
@@ -362,55 +309,12 @@ $ npm install --save-dev --save-exact prettier
 
 Generamos dos archivos: `.prettierrc.json` y `.prettierignore`.
 
-Y, con esto, podemos realizar formato de código. Para que se realice de forma automática, necesitamos implementar una configuración específica en nuestro Visual Studio Code.
-
-Instalaremos dos extensiones:
-
-- EslintESLint
-- Prettier - Code formatter
-
-Revisemos si hace los cambios.
-
-Generamos una carpeta llamada `.vscode`.
-
-Dentro, colocamos esta configuración:
+Dentro de `.prettierrc.json`, integramos el código:
 
 ```json
 {
-  "emmet.includeLanguages": {
-    "markdown": "html",
-    "javascript": "javascriptreact",
-    "typescript": "typescriptreact"
-  },
-  "emmet.showSuggestionsAsSnippets": true,
-  "emmet.triggerExpansionOnTab": true,
-  "files.exclude": {
-    "**/*.js.map": {
-      "when": "$(basename)"
-    },
-    "**/node_modules": true
-  },
-  "html.autoClosingTags": true,
-  "javascript.autoClosingTags": true,
-  "javascript.suggest.completeFunctionCalls": true,
-  "javascript.suggest.autoImports": true,
-  "search.exclude": {
-    "**/coverage": true,
-    "**/node_modules": true
-  },
-  "eslint.alwaysShowStatus": true,
-  "eslint.probe": ["javascript", "javascriptreact"],
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": false,
-    "editor.codeActionsOnSave": [
-      "source.formatDocument",
-      "source.fixAll.eslint"
-    ]
-  },
-  "files.associations": {
-    "*.css": "tailwindcss"
-  }
+  "semi": false,
+  "singleQuote": true
 }
 ```
 
