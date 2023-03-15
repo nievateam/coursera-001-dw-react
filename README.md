@@ -182,9 +182,7 @@ Observa que estamos escribiendo en la etiqueta `<h1>`una propiedad llamada class
 
 Por ejemplo, observa que tenemos `underline` como uno de los valores, el cual significa que está subrayando el texto interno.
 
-El resultado debería ser esta imagen:
-
-![](docs/assets/02.png)
+El resultado debería ser una imagen con un texto `"Hello World"`.
 
 Listo, ya podemos a empezar a trabajar con Tailwind.
 
@@ -309,9 +307,11 @@ Para ello, generamos la instalación en terminal:
 $ npm install --save-dev --save-exact prettier
 ```
 
-Generamos dos archivos: `.prettierrc.json` y `.prettierignore`.
+Realizamos la instalación de la extensión de `Prettier` en Visual Studio Code.
 
-Dentro de `.prettierrc.json`, integramos el código:
+Generamos un archivo llamado `.prettierrc.json`
+
+Colocamos esta información:
 
 ```json
 {
