@@ -7,13 +7,24 @@ layout: editorial
 
 # Desarrollo Web con React: Tu primer app
 
-Por Mike Nieva. Impulsado por "Coursera Guide Projects".
+## Desarrollo Web con React: Tu primer app
 
-## Tabla de contenidos
+Por Mike Nieva. Impulsado por "Coursera Guided Projects".
 
-*
+## Recursos
 
-## Introducción
+Guía Principal: [LINK](https://weare.nieva.team/desarrollo-web-en-react-construye-tu-primer-web/) Repositorio: [LINK](https://github.com/nievateam/coursera-001-dw-react) Demo: LINK
+
+### Tabla de contenidos
+
+* Generar y configurar un proyecto web con Vite
+* Determinar el proceso de ruteo y arquitectura de carpetas
+* Crear secciones principales y manejo de clases con Tailwind
+* Crear la página de aterrizaje
+* Crear la iteración de elementos con React
+* Crear la página de contacto
+
+### Generar y configurar un proyecto web con Vite
 
 Te doy la bienvenida a la construcción de un proyecto web en React, utilizando herramientas modernas en Frontend.
 
@@ -25,29 +36,30 @@ Una vez terminado el proyecto guiado, así como sus respectivas prácticas, int�
 
 Las tecnologías que estaremos implementando serán:
 
-* App
-  * **React.** Librería que nos permitirá desarrollar componentes
-  * **React Router.**
-  * **TailwindCSS.**
-  * **Eslint.**
-  * **Prettier**
-  * **Husky.**
-* Compilador
-  * **Vite**
+```
+- App
+  - React
+  - React Router
+  - TailwindCSS
+  - Eslint
+  - Prettier
+- Compilador
+  - Vite
+```
 
-## Generar un proyecto en React con Vite
+### Generar un proyecto en React con Vite
 
-### Objetivo
+#### Objetivo
 
 Vamos a comenzar a desarrollar nuestro proyecto web en React.
 
 Este será nuestro resultado final:
 
-**Primer sección. Inicio.** ![](.gitbook/assets/nievapizzas01.png)
+**Primer sección. Inicio.**&#x20;
 
-**Segunda sección. Contacto.** ![](.gitbook/assets/nievapizzas02.png)
+**Segunda sección. Contacto.**&#x20;
 
-### Configuración inicial
+#### Configuración inicial
 
 Necesitamos primero crear un proyecto web con Vite, utilizando en terminal:
 
@@ -87,8 +99,6 @@ Esto te aparecerá en terminal:
 
 Y, esto, en tu navegador, en `http://localhost:5173`:
 
-![](.gitbook/assets/01.png)
-
 Al haber instalado y usado los comandos con Vite, estamos realizando dos actividades:
 
 * Generar un servidor de desarrollo.
@@ -100,7 +110,7 @@ Aunque ya habiamos hecho esto anteriormente, solo instalamos las dependencias ne
 
 Sitúate en la terminal y presiona `CTRL + C`. Esto detendrá el servidor y ya no podrás acceder a él.
 
-### Configuración de TailwindCSS
+#### Configuración de TailwindCSS
 
 TailwindCSS es una herramienta que nos permite trabajar estilos directamente en los componentes. Es bastante útil. Dependiendo del estilo del proyecto, puede que exista o no, para el manejo del diseño y hojas de estilo del proyecto web, pero, en este caso, lo usaremos.
 
@@ -186,7 +196,7 @@ El resultado debería ser una imagen con un texto `"Hello World"`.
 
 Listo, ya podemos a empezar a trabajar con Tailwind.
 
-### Instalación de guía de estilos
+#### Instalación de guía de estilos
 
 Cada vez que comiences un proyecto, es importante estableces cuáles van a ser las reglas que se deberán cumplir en tu proyecto. Puede ser tan estricto o tan flexible como tú quieras.
 
@@ -236,7 +246,7 @@ NOTA: Es importante que tengas actualizado VSC al menos a partir de v17.
 
 Notarás que te aparecerá un error en `App.jsx`. Esto se debe a que estamos inclumpiendo la regla de que el archivo debe tener importando `React`.
 
-En caso de que no aparezca ningún error, abrimos Settings, y nos dirigimos a la sección de habilitar `eslint`. La encontrarás bajo esta opción: ![](.gitbook/assets/04.png)
+En caso de que no aparezca ningún error, abrimos Settings, y nos dirigimos a la sección de habilitar `eslint`. La encontrarás bajo esta opción:&#x20;
 
 Si tampoco aparece la opción, verifica que tu Visual Studio Code se encuentre en la versión 17 mínimo.
 
@@ -293,7 +303,7 @@ Con esta configuración, el archivo `App.jsx` te pide que ya no incluyas la impo
 
 Puedes conocer cada regla en la documentación de `eslint`. Lo importante es que aquí estamos estableciendo qué es válido y qué no. Y al mismo tiempo, instalamos librerías adicionales que nos permiten generar reglas más específicas.
 
-### Configuración de formato de código
+#### Configuración de formato de código
 
 Una parte son las reglas del código y otra es el formato del mismo.
 
@@ -320,4 +330,27 @@ Colocamos esta información:
 }
 ```
 
+Y, finalmente, realizamos una extension de prettier dentro de `eslint` para evitar conflictos entre ellos.
+
+```json
+...
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "prettier"
+    ],
+...
+```
+
 Perfecto. La configuración está terminada y es momento de que comencemos a trabajar en la aplicación en la siguiente sección.
+
+### Determinar el proceso de ruteo y arquitectura de carpetas
+
+### Crear secciones principales y manejo de clases con Tailwind
+
+### Crear la página de aterrizaje
+
+### Crear la iteración de elementos con React
+
+### Crear la página de contacto
