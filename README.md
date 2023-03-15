@@ -43,9 +43,9 @@ Vamos a comenzar a desarrollar nuestro proyecto web en React.
 
 Este será nuestro resultado final:
 
-**Primer sección. Inicio.** ![](docs/assets/nievapizzas01.png)
+**Primer sección. Inicio.** ![](.gitbook/assets/nievapizzas01.png)
 
-**Segunda sección. Contacto.** ![](docs/assets/nievapizzas02.png)
+**Segunda sección. Contacto.** ![](.gitbook/assets/nievapizzas02.png)
 
 ### Configuración inicial
 
@@ -87,7 +87,7 @@ Esto te aparecerá en terminal:
 
 Y, esto, en tu navegador, en `http://localhost:5173`:
 
-![](docs/assets/01.png)
+![](.gitbook/assets/01.png)
 
 Al haber instalado y usado los comandos con Vite, estamos realizando dos actividades:
 
@@ -236,7 +236,7 @@ NOTA: Es importante que tengas actualizado VSC al menos a partir de v17.
 
 Notarás que te aparecerá un error en `App.jsx`. Esto se debe a que estamos inclumpiendo la regla de que el archivo debe tener importando `React`.
 
-En caso de que no aparezca ningún error, abrimos Settings, y nos dirigimos a la sección de habilitar `eslint`. La encontrarás bajo esta opción: ![](docs/assets/04.png)
+En caso de que no aparezca ningún error, abrimos Settings, y nos dirigimos a la sección de habilitar `eslint`. La encontrarás bajo esta opción: ![](.gitbook/assets/04.png)
 
 Si tampoco aparece la opción, verifica que tu Visual Studio Code se encuentre en la versión 17 mínimo.
 
